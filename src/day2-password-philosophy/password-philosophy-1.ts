@@ -1,13 +1,12 @@
 /* part 1 */
 export const splitPassword = (pass: string) => {
-  const obj = { min: null, max: null, char: "", pass: "" };
   const temp = pass.split(" ");
-
-  obj.min = parseInt(temp[0].split("-")[0]);
-  obj.max = parseInt(temp[0].split("-")[1]);
-  obj.char = temp[1].replace(":", "");
-  obj.pass = temp[2];
-  return obj;
+  return {
+    min: parseInt(temp[0].split("-")[0]),
+    max: parseInt(temp[0].split("-")[1]),
+    char: temp[1].replace(":", ""),
+    pass: temp[2],
+  };
 };
 
 export const isPasswordOK = (passWithAssets: string): boolean => {

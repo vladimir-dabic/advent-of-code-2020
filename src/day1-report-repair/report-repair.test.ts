@@ -1,5 +1,5 @@
 import chalk from "chalk";
-import fixture from "./fixture.json";
+const fixture = require("./fixture.json");
 import {
   findTwoReportstoSum2020,
   findThreeReportstoSum2020,

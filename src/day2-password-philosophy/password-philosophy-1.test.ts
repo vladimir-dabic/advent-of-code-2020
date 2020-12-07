@@ -4,13 +4,13 @@ import {
   howManyPasswordsAreOK,
   isPasswordOK,
   splitPassword,
-} from "./password-philosophy";
+} from "./password-philosophy-1";
 
 const ex1 = "1-3 a: abcde";
 const ex2 = "1-3 b: cdefg";
 const ex3 = "2-9 c: ccccccccc";
 
-describe.only("day 2", () => {
+describe("day 2", () => {
   it("should test splitPassword function", () => {
     expect(splitPassword(ex1)).toStrictEqual({
       min: 1,
@@ -45,8 +45,4 @@ describe.only("day 2", () => {
         `)
     );
   });
-});
-
-describe.only("day 2 - part 2", () => {
-  it("should work", () => {});
 });
