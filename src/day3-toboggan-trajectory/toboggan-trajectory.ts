@@ -7,7 +7,7 @@ export const isClearPath = (
   maxLength: number
 ) => (row.charAt(pathIndex % maxLength) !== THREE ? true : false);
 
-export const findTheThrees = (toboggan: string[]) => {
+export const findTheThrees = (toboggan: string[], pathNum = 3) => {
   let final = 0;
   let path = 0;
 
@@ -15,7 +15,7 @@ export const findTheThrees = (toboggan: string[]) => {
     if (!isClearPath(row, path, MAX_LENGTH)) {
       final += 1;
     }
-    path += 3;
+    path += pathNum;
   });
   return final;
 };
