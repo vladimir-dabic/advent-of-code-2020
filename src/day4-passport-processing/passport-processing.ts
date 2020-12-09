@@ -1,7 +1,7 @@
 const VALID_1 = "byrcidecleyrhclhgtiyrpid";
 const VALID_2 = "byrecleyrhclhgtiyrpid";
 
-const isValidObj = (obj: object) => {
+const isValidObj = (obj: any) => {
   const str = Object.keys(obj).sort().join("");
   return str === VALID_1 || str === VALID_2;
 };
