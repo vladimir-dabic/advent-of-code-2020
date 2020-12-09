@@ -5,6 +5,7 @@ import {
   getHighestSeat,
   getIdFromPattern,
   getValidRowOrColumn,
+  getEmptySeat,
 } from "./binary-boarding";
 
 describe("day 5 - binary boarding - part 1", () => {
@@ -35,6 +36,15 @@ describe("day 5 - binary boarding - part 1", () => {
     console.log(
       chalk.blue(`
         day 5 - binary boarding - part 1 = ${chalk.yellow(result)}
+        `)
+    );
+  });
+  it("should give me the result for pat two :)", () => {
+    const result = getEmptySeat(fixture);
+    expect(result).toBe(607);
+    console.log(
+      chalk.blue(`
+        day 5 - binary boarding - part 2 = ${chalk.yellow(result)}
         `)
     );
   });

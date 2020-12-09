@@ -27,3 +27,9 @@ export const getHighestSeat = (patterns: string[]) => {
   const allIds = patterns.map(pattern => getIdFromPattern(pattern));
   return Math.max(...allIds);
 };
+
+export const getEmptySeat = (patterns: string[]) =>
+  patterns
+    .map(pattern => getIdFromPattern(pattern))
+    .sort((a, b) => a - b)
+    .filter((id, index, initialArr) => id + 1 !== initialArr[index + 1])[0] + 1;
